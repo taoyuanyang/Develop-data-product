@@ -1,0 +1,27 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Yangtaoyuan"
+date: "2021/1/10"
+output:
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+## load library and data
+```{r}
+library(plotly)
+data(iris)
+head(iris)
+```
+
+## Iris
+
+```{r}
+plot_ly(x= iris$Sepal.Width, y= iris$Sepal.Length, z = iris$Species, type = "scatter3d", mode = "markers", color = iris$Species)
+```
+
+## Thanks
